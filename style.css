@@ -1,0 +1,16 @@
+.banner {
+    height: 400px;
+    background-image: url('chuttersnap.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.banner h1 {
+    text-align: center;
+    margin: auto;
+    font-family: sans-serif;
+    color: white;
+    /* background-color: black; */
+    border-radius: 10px;
+}
