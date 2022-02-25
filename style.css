@@ -1,7 +1,7 @@
 div.banner {
     display: block;
     margin: auto;
-    font-family: sans-serif;
+    font-family: 'Courier New', monospace;
     text-align: center;
     padding: 80px 0px 80px 0px;
     background-image: url('chuttersnap.jpg');
@@ -47,4 +47,20 @@ div.nav-bar a {
 div.nav-bar a:hover {
     background-color: black;
     transition: 0.3s;
+}
+
+div.small-header {
+    padding: 20px;
+}
+
+div.small-header img {
+    width: 100px;
+    float: left;
+    margin-right: 30px;
+}
+
+div.small-header h1 {
+    display: inline-block;
+    font-family: 'Courier New', monospace;
+    font-size: 40px;
 }
