@@ -3,7 +3,7 @@ div.banner {
     margin: auto;
     font-family: sans-serif;
     text-align: center;
-    padding: 130px 0px 130px 0px;
+    padding: 80px 0px 80px 0px;
     background-image: url('chuttersnap.jpg');
     background-size: cover;
     border-radius: 10px;
@@ -20,7 +20,7 @@ div.banner h1 {
 }
 
 div.nav-bar {
-    background-color: blue;
+    background-color: #14213D;
     padding: 24px 0px 24px 0px;
     text-align: center;
     font-size: 20pt;
