@@ -1,16 +1,20 @@
-.banner {
-    height: 400px;
+div.banner {
+    display: block;
+    margin: auto;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 130px 0px 130px 0px;
     background-image: url('chuttersnap.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
+    border-radius: 10px;
     background-position: center;
 }
 
-.banner h1 {
-    text-align: center;
-    margin: auto;
-    font-family: sans-serif;
+div.banner h1 {
     color: white;
-    /* background-color: black; */
-    border-radius: 10px;
+    font-size: 56pt;
+    display: inline-block;
+    background-color: rgba(70, 70, 70, 0.8);
+    border-radius: 25px;
+    padding: 8px 20px;
 }
