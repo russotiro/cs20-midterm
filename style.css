@@ -14,7 +14,37 @@ div.banner h1 {
     color: white;
     font-size: 56pt;
     display: inline-block;
-    background-color: rgba(70, 70, 70, 0.8);
+    background-color: rgba(70, 70, 70, 0.85);
     border-radius: 25px;
     padding: 8px 20px;
+}
+
+div.nav-bar {
+    background-color: blue;
+    padding: 24px 0px 24px 0px;
+    text-align: center;
+    font-size: 20pt;
+    color: #fff;
+    font-family: Tahoma, sans-serif;
+    border-radius: 10px;
+    margin-top: 6px;
+}
+
+div.nav-bar span.curr-page {
+    font-weight: bold;
+}
+
+div.nav-bar span.nav-link {
+    padding: 0px 8px;
+}
+
+div.nav-bar a {
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+}
+
+div.nav-bar a:hover {
+    background-color: black;
+    transition: 0.3s;
 }
