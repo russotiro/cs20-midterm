@@ -6,8 +6,31 @@
         <link rel="shortcut icon" href="./favicon.ico" />
         <style>
             #home-text {
-                width: 100%;
+                width: 47%;
                 max-width: 500px;
+                display: inline-block;
+                margin: 10px 0px 0px 10px;
+            }
+
+            img {
+                width: 47%;
+                max-width: 445px;
+                display: inline-block;
+                float: right;
+                margin: 30px 0px;
+                border-radius: 15px;
+            }
+
+            @media (max-width: 960px) {
+                img,#home-text {
+                    max-width: 100%;
+                    width: 85%;
+                    margin: auto;
+                    display: block;
+                    float: none;
+                }
+
+                img { margin: 30px auto; }
             }
         </style>
     </head>
@@ -36,5 +59,6 @@
             <p>To purchase tickets for our regular transportation routes, please use the form provided on our <a href="./tickets.html">Tickets</a> page. To book a rental, get in touch with us on the <a href="./contact.html">Contact</a> page.</p>
             <p>Finally, take a look at our route map on the <a href="./map.html">Map</a> page, which shows all of our regular transportation routes on a map.</p>
         </div>
+        <img src="./buses.jpg" alt="A fleet of buses">
     </body>
 </html>
