@@ -1,3 +1,5 @@
+/* header stuff */
+
 div.banner {
     display: block;
     margin: auto;
@@ -64,4 +66,10 @@ div.small-header h1 {
     display: inline-block;
     font-family: 'Courier New', monospace;
     font-size: 34px;
+}
+
+/* other stuff */
+
+p {
+    font-family: Verdana, sans-serif;
 }
