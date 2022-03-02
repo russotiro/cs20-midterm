@@ -68,8 +68,25 @@ div.small-header h1 {
     font-size: 34px;
 }
 
-/* other stuff */
+/* general stuff */
 
 p {
     font-family: Verdana, sans-serif;
+}
+
+h2 {
+    font-family: 'Courier New', monospace;
+    font-size: 32pt;
+}
+
+/* region */
+
+div.region {
+    text-align: center;
+}
+
+div.region img {
+    margin: auto;
+    width: 85%;
+    max-width: 1000px;
 }
