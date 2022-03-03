@@ -2,13 +2,20 @@
 <html>
 
 <head>
-    <title>Gus's Buses</title>
+    <title>Region - Gus's Buses</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./favicon.ico" />
     <style media="screen">
         #region-intro { text-align: center; }
         #region-intro p { margin-bottom: 50px; }
+        div.region { display: none; }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("div.region").fadeIn(1200);
+        });
+    </script>
 </head>
 
 <body>
