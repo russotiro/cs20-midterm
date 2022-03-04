@@ -1,3 +1,9 @@
+:root {
+    --navy: #14213D;
+    --golden-yellow: #FCA311;
+    --light-gray: #E5E5E5;
+}
+
 div.banner {
     display: block;
     margin: auto;
