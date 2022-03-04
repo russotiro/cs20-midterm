@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Region - Gus's Buses</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <style media="screen">
+        #region-intro { text-align: center; }
+        #region-intro p { margin-bottom: 50px; }
+        div.region { display: none; }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("div.region").fadeIn(1200);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="small-header">
+        <a href="./index.html"><img src="./logo.png" alt="Logo for Gus's Buses"></a>
+        <h1>Gus&rsquo;s Buses</h1>
+    </div>
+    <div class="nav-bar">
+        <a href="./services.html">
+            <span class="nav-link">SERVICES</span></a> &#8226;
+        <a href="./catalog.html">
+            <span class="nav-link">CATALOG</span></a> &#8226;
+        <a href="./tickets.html">
+            <span class="nav-link">TICKETS</span></a> &#8226;
+        <span class="nav-link curr-page">REGION</span> &#8226;
+        <a href="./contact.html">
+            <span class="nav-link">CONTACT</span></a> &#8226;
+        <a href="./about.html">
+            <span class="nav-link">ABOUT</span></a>
+    </div>
+    <div id="region-intro">
+        <h2>Region</h2>
+        <p>Click on the image for greater detail!</p>
+    </div>
+    <div class="region">
+        <a href="https://www.google.com/maps/d/u/0/edit?mid=1lLSGyo2TCZM3K2Wbh07wMxN9DkbPSGyS&usp=sharing" target="_blank"><img src="./region.png" alt="Gus's Buses Region" /></a>
+    </div>
+</body>
+
+</html>

@@ -2,12 +2,12 @@
 <html>
 
 <head>
-    <title>Gus's Buses</title>
+    <title>Tickets - Gus's Buses</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="./map.js"></script>
     <style>
-            form {
+        form {
             margin-top: 50px;
             margin-left: 40%;
             margin-bottom: 50px;
@@ -48,85 +48,27 @@
             flex-basis: 0;
             flex-grow: 4;
             height: 100%;
+        }
     </style>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script>
-        function calcTickets() {
-            prompt("HI!")
-        }
-
-        function initMap() {
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 4,
-                center: {
-                    lat: -24.345,
-                    lng: 134.46
-                }, // Australia.
-            });
-            const directionsService = new google.maps.DirectionsService();
-            const directionsRenderer = new google.maps.DirectionsRenderer({
-                draggable: true,
-                map,
-                panel: document.getElementById("panel"),
-            });
-
-            directionsRenderer.addListener("directions_changed", () => {
-                const directions = directionsRenderer.getDirections();
-
-                if (directions) {
-                    computeTotalDistance(directions);
-                }
-            });
-            displayRoute(
-                "Perth, WA",
-                "Sydney, NSW",
-                directionsService,
-                directionsRenderer
-            );
-        }
-
-        function displayRoute(origin, destination, service, display) {
-            service
-                .route({
-                    origin: origin,
-                    destination: destination,
-                    waypoints: [{
-                        location: "Adelaide, SA"
-                    }, {
-                        location: "Broken Hill, NSW"
-                    }, ],
-                    travelMode: google.maps.TravelMode.DRIVING,
-                    avoidTolls: true,
-                })
-                .then((result) => {
-                    display.setDirections(result);
-                })
-                .catch((e) => {
-                    alert("Could not display directions due to: " + e);
-                });
-        }
-
-        function computeTotalDistance(result) {
-            let total = 0;
-            const myroute = result.routes[0];
-
-            if (!myroute) {
-                return;
-            }
-
-            for (let i = 0; i < myroute.legs.length; i++) {
-                total += myroute.legs[i].distance.value;
-            }
-
-            total = total / 1000;
-            document.getElementById("total").innerHTML = total + " km";
-        }
-    </script>
 </head>
 
 <body>
-    <div class="banner">
-        <h1>Gus's Buses</h1>
+    <div class="small-header">
+        <a href="./index.html"><img src="./logo.png" alt="Logo for Gus's Buses"></a>
+        <h1>Gus&rsquo;s Buses</h1>
+    </div>
+    <div class="nav-bar">
+        <a href="./services.html">
+            <span class="nav-link">SERVICES</span></a> &#8226;
+        <a href="./catalog.html">
+            <span class="nav-link">CATALOG</span></a> &#8226;
+        <span class="nav-link curr-page">TICKETS</span> &#8226;
+        <a href="./region.html">
+            <span class="nav-link">REGION</span></a> &#8226;
+        <a href="./contact.html">
+            <span class="nav-link">CONTACT</span></a> &#8226;
+        <a href="./about.html">
+            <span class="nav-link">ABOUT</span></a>
     </div>
     <form onSubmit="JavaScript:calcTickets()">
         <label for="fname">First name:</label><br>

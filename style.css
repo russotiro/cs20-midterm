@@ -1,18 +1,14 @@
-:root {
-    --navy: #14213D;
-    --golden-yellow: #FCA311;
-    --light-gray: #E5E5E5;
-}
+/* header stuff */
 
 div.banner {
     display: block;
     margin: auto;
-    font-family: sans-serif;
+    font-family: 'Courier New', monospace;
     text-align: center;
-    padding: 130px 0px 130px 0px;
-    background-image: url('chuttersnap.jpg');
+    padding: 80px 0px 80px 0px;
+    background-image: url('banner.jpg');
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 12px;
     background-position: center;
 }
 
@@ -26,13 +22,13 @@ div.banner h1 {
 }
 
 div.nav-bar {
-    background-color: blue;
+    background-color: #14213D;
     padding: 24px 0px 24px 0px;
     text-align: center;
     font-size: 20pt;
     color: #fff;
     font-family: Tahoma, sans-serif;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-top: 6px;
 }
 
@@ -51,6 +47,48 @@ div.nav-bar a {
 }
 
 div.nav-bar a:hover {
-    background-color: black;
+    color: black;
+    background-color: #fca311;
     transition: 0.3s;
+}
+
+div.small-header {
+    padding: 10px;
+}
+
+div.small-header img {
+    width: 80px;
+    float: left;
+    margin-right: 30px;
+}
+
+div.small-header h1 {
+    display: inline-block;
+    font-family: 'Courier New', monospace;
+    font-size: 34px;
+}
+
+
+/* general stuff */
+
+p {
+    font-family: Verdana, sans-serif;
+}
+
+h2 {
+    font-family: 'Courier New', monospace;
+    font-size: 32pt;
+}
+
+
+/* region */
+
+div.region {
+    text-align: center;
+}
+
+div.region img {
+    margin: auto;
+    width: 85%;
+    max-width: 1000px;
 }
