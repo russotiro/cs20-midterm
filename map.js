@@ -29,6 +29,7 @@ function calculateAndDisplayRoute(form, directionsService, directionsRenderer, s
             directionsRenderer.setDirections(response);
             var dist = computeTotalDistance(response);
             calcAndDisplayCost(form, dist);
+            loadPurchaseForm();
         })
         .catch((e) => window.alert("Directions request failed due to " + status));
 }
@@ -83,4 +84,9 @@ function calcAndDisplayCost(form, dist) {
     cost = Math.round(cost);
     document.getElementById("cost").innerHTML = "<p>Estimated Cost: $" + cost + "</p>";
 
+}
+
+function loadPurchaseForm() {
+    document.getElementById("purchasetxt").innerHTML = "Enter your name and email to purchase your tickets!"
+    document.getElementById("buy").innerHTML = "<form action=\"\"> <label for=\"fname\">First name:</label><br> <input type=\"text\" id=\"fname\" name=\"fname\" value=\"\"><br> <label for=\"lname\">Last name:</label><br> <input type=\"text\" id=\"lname\" name=\"lname\" value=\"\"><br> <label for=\"email\">Enter your email:</label><br> <input type=\"email\" id=\"email\" name=\"email\"><br><br> <input type=\"button\" value=\"Purchase\"> </form>"
 }

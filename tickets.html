@@ -15,7 +15,7 @@
             margin: 0;
             padding: 0;
         }
-
+        
         input[type=text],
         input[type=email] {
             width: 40%;
@@ -27,7 +27,7 @@
             box-sizing: border-box;
             margin-bottom: 2vh;
         }
-
+        
         input[type=radio] {
             padding: 12px 20px;
             margin-left: 30%;
@@ -37,7 +37,7 @@
             box-sizing: border-box;
             margin-bottom: 2vh;
         }
-
+        
         input[type=button] {
             width: 96%;
             background-color: #FCA311;
@@ -47,19 +47,20 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            margin-bottom: 3%;
         }
-
+        
         input[type=button]:hover {
             background-color: hsl(37, 98%, 47%);
             cursor: pointer;
         }
-
+        
         label {
             font-family: sans-serif;
             margin-top: 20vh;
             margin-left: 30%;
         }
-
+        
         .rad {
             font-family: sans-serif;
             margin-top: 20vh;
@@ -69,6 +70,7 @@
 </head>
 
 <body>
+
     <div class="small-header" style="margin:8px;">
         <a href="./index.html"><img src="./logo.png" alt="Logo for Gus's Buses"></a>
         <h1>Gus&rsquo;s Buses</h1>
@@ -86,6 +88,10 @@
         <a href="./about.html">
             <span class="nav-link">ABOUT</span></a>
     </div>
+
+    <h2 style="text-align:center">Calculate a Ticket Cost Estimate</h2>
+    <p style="text-align:center;margin-left:5%;margin-right:5%;">Enter your starting address and your destination address and let us know what kind of bus you'd like to enjoy and we'll provide an estimate for your ticket cost!</p>
+
     <div id="map"></div>
     <div id="cost"></div>
     <form name="ticketform" action="" method="GET">
@@ -95,7 +101,7 @@
         <label for="end">Destination:</label><br>
         <input type="text" id="end" name="end" value=""><br>
         <label>Roundtrip? </label><br>
-        <input type="radio" id="yes" name="roundtrip" value="Yes">
+        <input type="radio" id="yes" name="roundtrip" value="Yes" checked="checked">
         <label for="yes" class="rad">Yes</label><br>
         <input type="radio" id="no" name="roundtrip" value="No">
         <label for="no" class="rad">No</label><br>
@@ -111,6 +117,10 @@
 
         <br>
         <input type="button" value="Submit" onClick="handleForm(this.form)">
+    </form>
+    <p style="text-align:center; margin-left:5%; margin-right:5%;" id="purchasetxt"></p>
+    <form name="buy" id="buy" action="">
+
     </form>
 
 
