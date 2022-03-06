@@ -1,5 +1,6 @@
-var costPerKM = 3;
-var busTypeMultiplier = [1, 1.2, 1.4, 1.8];
+var costPerKM = 2;
+var flatRate = 600;
+var busTypeMultiplier = [1.4, 1.1, 1.8, 0.9, 1];
 
 function initMap() {
     const directionsService = new google.maps.DirectionsService();
@@ -77,7 +78,7 @@ function calcAndDisplayCost(form, dist) {
     var bus = e.options[e.selectedIndex].value;
     mult = mult * busTypeMultiplier[parseInt(bus)];
 
-    var cost = mult * costPerKM * dist;
+    var cost = flatRate + mult * costPerKM * dist;
 
     cost = Math.round(cost);
     document.getElementById("cost").innerHTML = "<p>Estimated Cost: $" + cost + "</p>";
