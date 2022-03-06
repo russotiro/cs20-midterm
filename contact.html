@@ -1,17 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html >
+    <head>
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="./favicon.ico" />
+        
+        <title> Contact Us </title>
+        <style type="text/css">
+            h1 {
+                text-align: center;
+                font-family: 'Courier New', monospace;
+                font-size: 50px;
+                font-weight: 400;
+            }
+            table {
+              border: 30px solid #14213D;
+              border-spacing: 30px;
+              width: 100%;
+             display: block;
+            }
+            th{
+                border: 5px solid #14213D;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+                padding-right: 40px;
+                text-align: center;
+                font-weight: 300px;
+            }
+            .row {
+              display: flex;
+              }
 
-<head>
-    <title>Contact - Gus's Buses</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./favicon.ico" />
-</head>
-
-<body>
-    <div class="small-header">
-        <a href="./index.html"><img src="./logo.png" alt="Logo for Gus's Buses"></a>
-        <h1>Gus&rsquo;s Buses</h1>
-    </div>
+          .column {
+              flex: 33.33%;
+              padding: 5px;
+              color: #14213D;
+          }
+            th {
+              width: 100%;  
+            }
+            h2{
+                color: black;
+                font-family: 'Courier New', monospace;
+            }
+            .pics{
+                height: 70%;
+                width: 33%;
+            }
+            textarea{
+                width: 100%;
+            }
+            div{
+                background-color: #14213D;
+            }
+            h3{
+                color: white;
+            }
+            .small-header{
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="small-header">
+            <a href="./index.html"><img src="./logo.png" alt="Logo for Gus's Buses"></a>
+            <h1>Gus&rsquo;s Buses</h1>
+        </div>
     <div class="nav-bar">
         <a href="./services.html">
             <span class="nav-link">SERVICES</span></a> &#8226;
@@ -21,10 +76,42 @@
             <span class="nav-link">TICKETS</span></a> &#8226;
         <a href="./region.html">
             <span class="nav-link">REGION</span></a> &#8226;
-        <span class="nav-link curr-page">CONTACT</span> &#8226;
+            <span class="nav-link curr-page">CONTACT</span> &#8226;
         <a href="./about.html">
             <span class="nav-link">ABOUT</span></a>
     </div>
-</body>
-
+        <br>
+        <br>
+        <br>
+        
+        <table>
+            <tr>
+            <th>  <h2>Contact Us</h2> <br> 
+            <h2>We’re here to help! Our Team is available 8am - 5pm EST, 
+                seven days a week.</h2></th>
+        </table>  
+        
+        <div class="row">
+      <div class="column">
+          <img class="pics" src="phone.jpeg"  alt="left" style="width:100%">
+          <h3> Call us at 306-564-3451</h3>
+      </div>
+      
+      <div class="column">
+          <img class="pics" src="email.jpeg" alt="center" style="width:100%">
+          <h3>Email us at GusDrivesBus@gmail.com </h3>
+      </div>
+      <div class="column">
+          <img class="pics" src="socialmedia.jpeg" alt="right" style="width:100%">
+          <h3>Follow us on Social Media @GusDrivesBus on all platforms</h3>
+      </div>
+    </div>
+    <form class="form" action="index.html" method="post">
+        <label for="keywords"> <h2> Leave a Message: </h2> </label> <br>
+        <textarea name="message" rows="10" cols="30"> 
+        </textarea>
+        
+        <input type="submit" value="Submit">
+    </form>
+    </body>
 </html>
