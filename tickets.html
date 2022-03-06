@@ -5,59 +5,73 @@
     <title>Tickets - Gus's Buses</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="./map.js"></script>
+    <script src="map.js"></script>
     <style>
-        form {
-            margin-top: 50px;
-            margin-left: 40%;
-            margin-bottom: 50px;
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
         }
         
-        input {
-            color: #193219;
+        input[type=text],
+        input[type=email] {
             width: 40%;
-            border: 2px solid var(--navy);
+            padding: 12px 20px;
+            margin-left: 30%;
+            display: inline-block;
+            border: 1px solid #ccc;
             border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 2vh;
+        }
+        
+        input[type=radio] {
+            padding: 12px 20px;
+            margin-left: 30%;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 2vh;
+        }
+        
+        input[type=button] {
+            width: 96%;
+            background-color: #FCA311;
+            color: white;
+            padding: 14px 20px;
+            margin-left: 2%;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type=button]:hover {
+            background-color: hsl(37, 98%, 47%);
+            cursor: pointer;
         }
         
         label {
             font-family: sans-serif;
+            margin-top: 20vh;
+            margin-left: 30%;
         }
         
-        input[type=submit] {
-            width: 20%;
-            margin-left: 10%;
-        }
-        
-        #container {
-            height: 100%;
-            display: flex;
-        }
-        
-        #sidebar {
-            flex-basis: 15rem;
-            flex-grow: 1;
-            padding: 1rem;
-            max-width: 30rem;
-            height: 100%;
-            box-sizing: border-box;
-            overflow: auto;
-        }
-        
-        #map {
-            flex-basis: 0;
-            flex-grow: 4;
-            height: 100%;
+        .rad {
+            font-family: sans-serif;
+            margin-top: 20vh;
+            margin-left: 0%;
         }
     </style>
 </head>
 
 <body>
-    <div class="small-header">
+    <div class="small-header" style="margin:8px;">
         <a href="./index.html"><img src="./logo.png" alt="Logo for Gus's Buses"></a>
         <h1>Gus&rsquo;s Buses</h1>
     </div>
-    <div class="nav-bar">
+    <div class="nav-bar" style="margin:8px;">
         <a href="./services.html">
             <span class="nav-link">SERVICES</span></a> &#8226;
         <a href="./catalog.html">
@@ -70,26 +84,34 @@
         <a href="./about.html">
             <span class="nav-link">ABOUT</span></a>
     </div>
-    <form onSubmit="JavaScript:calcTickets()">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" value=""><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value=""><br>
-        <label for="email">Enter your email:</label><br>
-        <input type="email" id="email" name="email"><br>
-        <div id="container">
-            <div id="map"></div>
-            <div id="sidebar">
-                <p>Total Distance: <span id="total"></span></p>
-                <div id="panel"></div>
-            </div>
-        </div>
+    <div id="map"></div>
+    <div id="cost"></div>
+    <form name="ticketform" action="" method="GET">
+
+        <label for="start">Starting Point:</label><br>
+        <input type="text" id="start" name="start" value=""><br>
+        <label for="end">Destination:</label><br>
+        <input type="text" id="end" name="end" value=""><br>
+        <label>Roundtrip? </label><br>
+        <input type="radio" id="yes" name="roundtrip" value="Yes">
+        <label for="yes" class="rad">Yes</label><br>
+        <input type="radio" id="no" name="roundtrip" value="No">
+        <label for="no" class="rad">No</label><br>
+        <label for="buses">Choose a bus type:</label>
+        <select name="buses" id="buses" form="ticketform">
+            <option value="0">Charter</option>
+            <option value="1">Sprinter</option>
+            <option value="2">Limo</option>
+            <option value="3">Executive</option>
+        </select><br>
+
+
         <br>
-        <input type="submit" value="Submit">
+        <input type="button" value="Submit" onClick="handleForm(this.form)">
     </form>
 
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4_Y5ayP5RT00n6EINqjplYSEyQOtIQdI&callback=initMap&v=weekly" async></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4_Y5ayP5RT00n6EINqjplYSEyQOtIQdI&v=weekly" async></script>
 </body>
 
 </html>

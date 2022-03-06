@@ -92,3 +92,10 @@ div.region img {
     width: 85%;
     max-width: 1000px;
 }
+
+
+/* map stuff */
+
+#cost {
+    text-align: center;
+}
