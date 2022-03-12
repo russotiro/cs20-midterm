@@ -71,7 +71,7 @@ div.small-header h1 {
 
 /* general stuff */
 
-p {
+p,label,.rad,option,input {
     font-family: Verdana, sans-serif;
 }
 
@@ -79,6 +79,8 @@ h2 {
     font-family: 'Courier New', monospace;
     font-size: 32pt;
 }
+
+div.center-holder { text-align: center; }
 
 
 /* region */
