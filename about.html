@@ -11,20 +11,35 @@
             display: inline-block;
             width: 33%;
             font-size: 20px;
-            font-family: 'Courier New', monospace;
-            padding: 3px
+            font-family: Verdana, sans-serif;
+            padding: 3px;
+            margin: 20px;
         }
-        .image-responsive {
+        img.image-responsive {
             display: inline-block;
-            width: 30%;
+            width: 100%;
             max-width: 30px;
-            border-radius: 10%
+            border-radius: 10%;
+        }
+        div.person img {
+            width: 200px;
         }
         div.bus {
             display: block;
-            height: 30px;
-            width: 15px;
         }
+
+        div.bus img {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        p {
+            width: 100%;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .text-div { text-align: center; }
     </style>
 </head>
 
@@ -46,65 +61,56 @@
             <span class="nav-link">CONTACT</span></a> &#8226;
         <span class="nav-link curr-page">ABOUT</span>
     </div>
-    <h2>Learn More About Gus's Buses</h2>
+    <div class="center-holder">
+        <h2>Learn More About Gus's Buses</h2>
     <br/>
     <br/>
     <h3>Who We Are</h3>
     <br/>
-    <div class="bus"><img src="OG_bus.jpg"></div>
-    <div>OUR FOUNDER: GUS DORNER
-    <p>Gus was born in Saugus, MA, in 1951, just outside of Boston city limits.
-         He grew up constantly traveling in and out of the city faced with 
-         heavy traffic and poor drivers. It was then that Gus decided to help
-         those not familiar to the area traverse it with ease. He founded Gus's
-         Buses in 1985 with only a small bus and a single driver. Over the next
-         20 years, he would grow and expand Gus's Buses into what it has become
-         today. In his life, he was known for his dedication to both his family
-         and his company. Gus retired in 2015 to spend more time with his wife
-         and kids.Today his legacy is carried by his two sons who are 
-         continuing the family business in their father's name.</p></div>
+    <div class="bus"><img src="OG_bus.jpg"></div></div>
+    <h4>OUR FOUNDER: GUS DORNER</h4>
+    <div class="text-div">
+    <p>Gus was born in Saugus, MA, in 1951, just outside of Boston city limits. He grew up constantly traveling in and out of the city faced with heavy traffic and poor drivers. It was then that Gus decided to help those not familiar to the area traverse it with ease. He founded Gus's Buses in 1985 with only a small bus and a single driver. Over the next 20 years, he would grow and expand Gus's Buses into what it has become today. In his life, he was known for his dedication to both his family and his company. Gus retired in 2015 to spend more time with his wife and kids.Today his legacy is carried by his two sons who are continuing the family business in their father's name.</p></div>
     <br/>
     <br/>
-    <div>BOARD MEMBERS</div>
+    <h4>BOARD MEMBERS</h4>
+    <div class="center-holder">
     <div class="person">
-        <img src="Marcus.jpg" class="img-responsive">
+        <img src="Marcus.jpg" class="img-responsive"><br />
         Marcus Dorner<br />
         Chief Executive Officer
     </div>
     <div class="person">
-        <img src="George.jpg" class="img-responsive">
+        <img src="George.jpg" class="img-responsive"><br />
         George Dorner<br/>
-        Cheif Operations Officer
+        Chief Operations Officer
     </div>
     <div class="person">
-        <img src="Klara.jpg" class="img-responsive">
+        <img src="Klara.jpg" class="img-responsive"><br />
         Klara Van Aggelen<br/>
         Chief Communications Officer
     </div>
     <div class="person">
-        <img src="Tyrone.jpg" class="img-responsive">
+        <img src="Tyrone.jpg" class="img-responsive"><br />
         Tyrone Tobias<br />
         Director of Operations
     </div>
     <div class="person">
-        <img src="Russell.jpg" class="img-responsive">
+        <img src="Russell.jpg" class="img-responsive"><br />
         Russell Parris<br />
         Chief Financial Officer
     </div>
     <div class="person">
-        <img src="Abramo.jpg" class="img-responsive">
+        <img src="Abramo.jpg" class="img-responsive"><br />
         Abramo Barber<br/>
         Chief Marketing Officer
-    </div>
+    </div></div>
     <br/>
-    <br/>    
-    <h3>Why Use Our Services</h3>
     <br/>
-    <p>We currently employ over 100 drivers across New England who ready to be
-        deployed for your transportation needs. We guarentee the quality of our
-        sevrives by requiring all drivers to pass our strict safety screenings.
-        All drivers are required to obtain a Commercial Drivers License before
-        they will be entrusted with the safety of our clients and passengers.</p>
+    <div class="center-holder">
+    <h3>Why Use Our Services</h3></div>
+    <br/><div class="text-div">
+    <p>We currently employ over 100 drivers across New England who are ready to be deployed for your transportation needs. We guarantee the quality of our services by requiring all drivers to pass our strict safety screenings. All drivers are required to obtain a Commercial Drivers' License before they will be entrusted with the safety of our clients and passengers.</p></div>
 </body>
 
 </html>
