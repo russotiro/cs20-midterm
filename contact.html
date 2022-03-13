@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html >
     <head>
-        
+
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="./favicon.ico" />
-        
+
         <title> Contact Us </title>
         <style type="text/css">
-            
-            table {
+
+            div.former-table {
               border: 30px solid #14213D;
-              border-spacing: 30px;
-              width: 100%;
-             display: block;
-             background-color: #FCA311;
+              display: block;
+              padding: 30px;
+              background-color: #FCA311;
             }
-            th{
+            div.former-table p {
                 border: 5px solid #14213D;
-                padding-top: 10px;
-                padding-bottom: 20px;
-                padding-left: 30px;
-                padding-right: 40px;
+                padding: 10px 0px;
                 text-align: center;
-                font-weight: 300px;
+                width: 80%;
+                background-color: white;
+                margin: auto;
+                font-size: 16pt;
             }
             .row {
               display: flex;
@@ -32,24 +31,20 @@
               flex: 33.33%;
               padding: 5px;
               color: #14213D;
+              text-align: center;
           }
-            th {
-              width: 100%; 
-              background-color: white;
-            }
-            
+
             h2{
                 color: black;
                 font-family: 'Courier New', monospace;
             }
             .pics{
-                height: 70%;
                 width: 33%;
             }
             textarea{
                 width: 100%;
             }
-            div{
+            div.row {
                 background-color: #14213D;
             }
             h3{
@@ -57,9 +52,6 @@
             }
             .small-header{
                 background-color: white;
-            }
-            h2{
-                
             }
         </style>
     </head>
@@ -81,38 +73,32 @@
         <a href="./about.html">
             <span class="nav-link">ABOUT</span></a>
     </div>
-        <br>
-        <br>
-        <br>
-        
-        <table>
-            <tr>
-            <th> <h2>Contact Us</h2> <br> 
-            <h2>We’re here to help! Our Team is available 8am - 5pm EST, 
-                seven days a week.</h2></th>
-        </table>  
-        
+    <div class="center-holder"><h2>Contact Us</h2></div>
+
+        <div class="former-table">
+            <p>We’re here to help! Our Team is available 8am - 5pm EST, seven days a week.</p>
+        </div>
+
         <div class="row">
       <div class="column">
-          <img class="pics" src="phone.jpeg"  alt="left" style="width:100%">
+          <img class="pics" src="phone.jpeg"  alt="Phone icon">
           <h3> Call us at 306-564-3451</h3>
       </div>
-      
+
       <div class="column">
-          <img class="pics" src="email.jpeg" alt="center" style="width:100%">
+          <img class="pics" src="email.jpeg" alt="Email icon">
           <h3>Email us at GusDrivesBus@gmail.com </h3>
       </div>
       <div class="column">
-          <img class="pics" src="socialmedia.jpeg" alt="right" style="width:100%">
+          <img class="pics" src="socialmedia.jpeg" alt="Social media icon">
           <h3>Follow us on Social Media @GusDrivesBus </h3>
       </div>
     </div>
     <form class="form" action="thanks.html" method="post">
-        <label for="keywords"> <h2> Leave a Message: </h2> </label> <br>
-        <textarea name="message" rows="10" cols="30"> 
-        </textarea>
-        <input type="submit" target="_blank"  value="Submit"> </a>
-    
+        <label for="keywords"> <h2> Leave a Message: </h2> </label>
+        <textarea name="message" rows="10" cols="30"></textarea>
+        <input type="submit" target="_blank"  value="Submit">
+
     </form>
     </body>
 </html>
