@@ -88,5 +88,9 @@ function calcAndDisplayCost(form, dist) {
 
 function loadPurchaseForm() {
     document.getElementById("purchasetxt").innerHTML = "Enter your name and email to purchase your tickets!"
-    document.getElementById("buy").innerHTML = "<form action=\"\"> <label for=\"fname\">First name:</label><br> <input type=\"text\" id=\"fname\" name=\"fname\" value=\"\"><br> <label for=\"lname\">Last name:</label><br> <input type=\"text\" id=\"lname\" name=\"lname\" value=\"\"><br> <label for=\"email\">Enter your email:</label><br> <input type=\"email\" id=\"email\" name=\"email\"><br><br> <input type=\"button\" value=\"Purchase\"> </form>"
+    document.getElementById("buy").innerHTML = "<form action=\"\"> <label for=\"fname\">First name:</label><br> <input type=\"text\" id=\"fname\" name=\"fname\" value=\"\"><br> <label for=\"lname\">Last name:</label><br> <input type=\"text\" id=\"lname\" name=\"lname\" value=\"\"><br> <label for=\"email\">Enter your email:</label><br> <input type=\"email\" id=\"email\" name=\"email\"><br><br> <div class=\"center-holder\"><input type=\"button\" id=\"submit-button\" value=\"Purchase\" onclick=\"handlePurchase()\"></div> </form>"
+}
+
+function handlePurchase() {
+    document.getElementById("purchase-complete").innerHTML = "<p>More information has been sent to your email address!</p>";
 }
