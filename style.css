@@ -29,7 +29,6 @@ div.nav-bar {
     color: #fff;
     font-family: Tahoma, sans-serif;
     border-radius: 12px;
-    margin-top: 6px;
 }
 
 div.nav-bar span.curr-page {
@@ -44,6 +43,13 @@ div.nav-bar a {
     text-decoration: none;
     color: #fff;
     border-radius: 10px;
+}
+
+div.nav-bar img {
+   float: right;
+   width: 50px;
+   margin: -8px 20px 0px 0px;
+   display: inline-block;
 }
 
 div.nav-bar a:hover {
