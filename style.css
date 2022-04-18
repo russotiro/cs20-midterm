@@ -81,6 +81,10 @@ p,label,.rad,option,input {
     font-family: Verdana, sans-serif;
 }
 
+p {
+   font-size: 12pt;
+}
+
 h2 {
     font-family: 'Courier New', monospace;
     font-size: 32pt;

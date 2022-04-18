@@ -2,10 +2,9 @@
 <html>
 
 <head>
-    <title>Tickets - Gus's Buses</title>
+    <title>Reservations - Gus's Buses</title>
     <meta name="keywords" content="charter bus gus buy tickets purchase" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./favicon.ico" />
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="map.js"></script>
@@ -13,12 +12,13 @@
         html,
         body {
             height: 100%;
-            margin: 4px;
+            margin: 0;
             padding: 0;
         }
 
         input[type=text],
-        input[type=email] {
+        input[type=email]
+        input[type=date] {
             width: 40%;
             padding: 12px 20px;
             margin-left: 30%;
@@ -39,41 +39,55 @@
             margin-bottom: 2vh;
         }
 
+        input[type=button] {
+            width: 96%;
+            background-color: #FCA311;
+            color: white;
+            padding: 14px 20px;
+            margin-left: 2%;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 3%;
+        }
+
+        input[type=button]:hover {
+            background-color: hsl(37, 98%, 47%);
+            cursor: pointer;
+        }
+
         label {
+            font-family: sans-serif;
             margin-top: 20vh;
             margin-left: 30%;
         }
 
         .rad {
+            font-family: sans-serif;
             margin-top: 20vh;
             margin-left: 0%;
-        }
-
-        #submit-button {
-            width: 80%;
-            max-width: 120px;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="small-header">
+    <div class="small-header" style="margin:8px;">
         <a href="./index.html"><img src="./logo.png" alt="Logo for Gus's Buses"></a>
         <h1>Gus&rsquo;s Buses</h1>
     </div>
-    <div class="nav-bar">
+    <div class="nav-bar" style="margin:8px;">
+        <a href="./about.html">
+            <span class="nav-link">ABOUT</span></a> &#8226;
         <a href="./services.html">
             <span class="nav-link">SERVICES</span></a> &#8226;
-        <a href="./catalog.html">
-            <span class="nav-link">CATALOG</span></a> &#8226;
-        <span class="nav-link curr-page">TICKETS</span> &#8226;
-        <a href="./region.html">
-            <span class="nav-link">REGION</span></a> &#8226;
+        <a href="./fleet.html">
+            <span class="nav-link">FLEET</span></a> &#8226;
+        <span class="nav-link curr-page">RESERVATIONS</span> &#8226;
         <a href="./contact.html">
-            <span class="nav-link">CONTACT</span></a> &#8226;
-        <a href="./about.html">
-            <span class="nav-link">ABOUT</span></a>
+            <span class="nav-link">CONTACT</span></a>
+        <a href="./login.html" />
+            <img src="./profile.png" alt="profile icon" /></a>
     </div>
 
     <h2 style="text-align:center">Calculate a Ticket Cost Estimate</h2>
@@ -92,25 +106,34 @@
         <label for="yes" class="rad">Yes</label><br>
         <input type="radio" id="no" name="roundtrip" value="No">
         <label for="no" class="rad">No</label><br>
-        <label for="buses">Choose a bus type:</label>
-        <select name="buses" id="buses" form="ticketform">
-            <option value="0">Motor Coach</option>
-            <option value="1">Mini Coach</option>
-            <option value="2">Limo</option>
-            <option value="3">Shuttle Van</option>
-            <option value="4">School Bus</option>
-        </select><br>
+        <label for="depart">Departure Date</label><br>
+        <input type="date" id="depart" name="depart"><br>
+        <label for="return">Return Date</label><br>
+        <input type="date" id="return" name="return"><br>
 
 
         <br>
-        <div class="center-holder">
-            <input type="button" id="submit-button" value="Submit" onClick="handleForm(this.form)">
-        </div>
+        <input type="button" value="Submit" onClick="handleForm(this.form)">
     </form>
-    <p style="text-align:center; margin-left:5%; margin-right:5%;" id="purchasetxt"></p>
-    <div id="purchase-complete" class="center-holder">
+    <?php
+        $conn = include 'connect.php';
+        $sql = "SELECT * FROM Buses";
+        $result = $conn->query($sql);
+        $conn->close();
 
-    </div>
+        $buses = array();
+        while ($row = $result->fetch_assoc()) {
+            $buses[] = $row;
+        }
+
+    ?>
+    <script>
+
+        var busStr = '<?php echo json_encode($buses); ?>'
+		var buses = JSON.parse(busStr);
+        console.log(buses[0]["type"]);
+    </script>
+    <p style="text-align:center; margin-left:5%; margin-right:5%;" id="purchasetxt"></p>
     <form name="buy" id="buy" action="">
 
     </form>
