@@ -90,7 +90,7 @@
             <img src="./profile.png" alt="profile icon" /></a>
     </div>
 
-    <h2 style="text-align:center">Calculate a Ticket Cost Estimate</h2>
+    <h2 style="text-align:center">Calculate a Reservation Cost Estimate</h2>
     <p style="text-align:center;margin-left:5%;margin-right:5%;">Enter your starting address and your destination address and let us know what kind of bus you'd like to enjoy and we'll provide an estimate for your ticket cost!</p>
 
     <div id="map"></div>
