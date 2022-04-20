@@ -20,9 +20,10 @@
                 padding: 10px 0px;
                 text-align: center;
                 width: 80%;
+                max-width: 600px;
                 background-color: white;
                 margin: auto;
-                font-size: 16pt;
+                border-radius: 12px;
             }
             .row {
               display: flex;
@@ -47,12 +48,21 @@
             }
             div.row {
                 background-color: #14213D;
+                margin-top: 20px;
+                padding-top: 25px;
             }
             .column h3{
                 color: white;
             }
             .small-header{
                 background-color: white;
+            }
+            div {
+                border-radius: 12px;
+            }
+            textarea {
+                width: 100%;
+                max-width: 600px;
             }
         </style>
     </head>
@@ -77,7 +87,7 @@
     <div class="center-holder"><h2>Contact Us</h2></div>
 
         <div class="former-table">
-            <p>We’re here to help! Our Team is available 8am - 5pm EST, seven days a week.</p>
+            <p>We&rsquo;re here to help! Our Team is available 8am - 5pm EST, seven days a week.</p>
         </div>
 
         <div class="row">
@@ -97,7 +107,7 @@
   </div><br />
     <form class="form" action="thanks.html" method="post">
         <label for="keywords"> <h3>Leave a Message:</h3> </label>
-        <textarea name="message" rows="10" cols="30"></textarea>
+        <textarea name="message" rows="8" cols="30"></textarea><br /><br />
         <input type="submit" target="_blank"  value="Submit">
 
     </form>

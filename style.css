@@ -74,6 +74,10 @@ div.small-header h1 {
     font-size: 34px;
 }
 
+img {
+    border-radius: 12px;
+}
+
 
 /* general stuff */
 
@@ -126,7 +130,8 @@ div.region img {
 /* button stuff */
 
 input[type=button] {
-    width: 96%;
+    width: 60%;
+    max-width: 200px;
     background-color: #FCA311;
     color: white;
     padding: 14px 20px;

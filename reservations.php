@@ -39,18 +39,6 @@
             margin-bottom: 2vh;
         }
 
-        input[type=button] {
-            width: 96%;
-            background-color: #FCA311;
-            color: white;
-            padding: 14px 20px;
-            margin-left: 2%;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-bottom: 3%;
-        }
-
         input[type=button]:hover {
             background-color: hsl(37, 98%, 47%);
             cursor: pointer;
